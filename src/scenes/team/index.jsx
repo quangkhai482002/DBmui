@@ -1,4 +1,5 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { useState } from "react";
+import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import { Header } from "../../components";
 import { DataGrid } from "@mui/x-data-grid";
 import { mockDataTeam } from "../../data/mockData";
@@ -7,11 +8,14 @@ import {
   AdminPanelSettingsOutlined,
   LockOpenOutlined,
   SecurityOutlined,
+  DeleteOutline,
 } from "@mui/icons-material";
 
 const Team = () => {
+  console.log("mockDataTeam", mockDataTeam);
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [selectedRows, setSelectedRows] = useState([]);
 
   const columns = [
     { field: "id", headerName: "ID" },
@@ -59,6 +63,7 @@ const Team = () => {
       },
     },
   ];
+
   return (
     <Box m="20px">
       <Header title="TEAM" subtitle="Managing the Team Members" />
@@ -77,15 +82,15 @@ const Team = () => {
             color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
+            // backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+            backgroundColor: colors.primary[600],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
+            // backgroundColor: colors.blueAccent[700],
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
@@ -95,6 +100,16 @@ const Team = () => {
           },
         }}
       >
+        {selectedRows.length > 0 && (
+          <IconButton
+            onClick={() => {
+              // Handle delete action here
+              console.log("Delete selected rows:", selectedRows);
+            }}
+          >
+            <DeleteOutline />
+          </IconButton>
+        )}
         <DataGrid
           rows={mockDataTeam}
           columns={columns}
@@ -105,7 +120,11 @@ const Team = () => {
               },
             },
           }}
+          pageSizeOptions={[10, 20, 50]}
           checkboxSelection
+          onSelectionModelChange={(newSelection) => {
+            setSelectedRows(newSelection);
+          }}
         />
       </Box>
     </Box>

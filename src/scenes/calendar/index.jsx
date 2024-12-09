@@ -58,7 +58,7 @@ const Calendar = () => {
         <Box
           display={`${isMdDevices ? "none" : "block"}`}
           flex="1 1 20%"
-          bgcolor={colors.primary[400]}
+          bgcolor={colors.primary[600]}
           p="15px"
           borderRadius="4px"
         >

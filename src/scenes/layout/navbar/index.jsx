@@ -41,7 +41,7 @@ const Navbar = () => {
         <Box
           display="flex"
           alignItems="center"
-          bgcolor={colors.primary[400]}
+          bgcolor={colors.primary[600]}
           borderRadius="3px"
           sx={{ display: `${isXsDevices ? "none" : "flex"}` }}
         >

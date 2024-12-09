@@ -64,7 +64,7 @@ const Invoices = () => {
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+            backgroundColor: colors.primary[600],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",

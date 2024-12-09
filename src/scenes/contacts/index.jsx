@@ -75,7 +75,7 @@ const Contacts = () => {
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+            backgroundColor: colors.primary[600],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
@@ -103,6 +103,7 @@ const Contacts = () => {
               },
             },
           }}
+          pageSizeOptions={[10, 20, 50]}
           checkboxSelection
         />
       </Box>

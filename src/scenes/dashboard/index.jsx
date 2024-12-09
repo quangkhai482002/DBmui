@@ -39,9 +39,10 @@ function Dashboard() {
             <Button
               variant="contained"
               sx={{
-                bgcolor: colors.blueAccent[700],
+                // bgcolor: colors.blueAccent[700],
+                bgcolor: "#157bf8",
                 color: "#fcfcfc",
-                fontSize: isMdDevices ? "14px" : "10px",
+                fontSize: isMdDevices ? "12px" : "10px",
                 fontWeight: "bold",
                 p: "10px 20px",
                 mt: "18px",
@@ -75,7 +76,7 @@ function Dashboard() {
         {/* Statistic Items */}
         <Box
           gridColumn="span 3"
-          bgcolor={colors.primary[400]}
+          bgcolor={colors.primary[600]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -94,7 +95,7 @@ function Dashboard() {
         </Box>
         <Box
           gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -113,7 +114,7 @@ function Dashboard() {
         </Box>
         <Box
           gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -132,7 +133,7 @@ function Dashboard() {
         </Box>
         <Box
           gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -153,12 +154,12 @@ function Dashboard() {
         {/* ---------------- Row 2 ---------------- */}
 
         {/* Line Chart */}
-        <Box
+        {/* <Box
           gridColumn={
             isXlDevices ? "span 8" : isMdDevices ? "span 6" : "span 3"
           }
           gridRow="span 2"
-          bgcolor={colors.primary[400]}
+          bgcolor={colors.primary[600]}
         >
           <Box
             mt="25px"
@@ -191,13 +192,13 @@ function Dashboard() {
           <Box height="250px" mt="-20px">
             <LineChart isDashboard={true} />
           </Box>
-        </Box>
+        </Box> */}
 
         {/* Transaction Data */}
-        <Box
+        {/* <Box
           gridColumn={isXlDevices ? "span 4" : "span 3"}
           gridRow="span 2"
-          bgcolor={colors.primary[400]}
+          bgcolor={colors.primary[600]}
           overflow="auto"
         >
           <Box borderBottom={`4px solid ${colors.primary[500]}`} p="15px">
@@ -239,13 +240,13 @@ function Dashboard() {
               </Box>
             </Box>
           ))}
-        </Box>
+        </Box> */}
 
         {/* Revenue Details */}
         <Box
           gridColumn={isXlDevices ? "span 4" : "span 3"}
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
@@ -276,7 +277,7 @@ function Dashboard() {
         <Box
           gridColumn={isXlDevices ? "span 4" : "span 3"}
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
         >
           <Typography
             variant="h5"
@@ -300,7 +301,7 @@ function Dashboard() {
         <Box
           gridColumn={isXlDevices ? "span 4" : "span 3"}
           gridRow="span 2"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.primary[600]}
           padding="30px"
         >
           <Typography variant="h5" fontWeight="600" mb="15px">

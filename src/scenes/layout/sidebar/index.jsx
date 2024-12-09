@@ -18,7 +18,6 @@ import {
   TimelineOutlined,
   WavesOutlined,
 } from "@mui/icons-material";
-import avatar from "../../../assets/images/avatar.png";
 import logo from "../../../assets/images/logo.png";
 import Item from "./Item";
 import { ToggledContext } from "../../../App";
@@ -30,7 +29,7 @@ const SideBar = () => {
   const colors = tokens(theme.palette.mode);
   return (
     <Sidebar
-      backgroundColor={colors.primary[400]}
+      backgroundColor={colors.primary[600]}
       rootStyles={{
         border: 0,
         height: "100%",
@@ -62,7 +61,7 @@ const SideBar = () => {
               <Box
                 display="flex"
                 alignItems="center"
-                gap="12px"
+                gap="10px"
                 sx={{ transition: ".3s ease" }}
               >
                 <img
@@ -74,9 +73,9 @@ const SideBar = () => {
                   variant="h4"
                   fontWeight="bold"
                   textTransform="capitalize"
-                  color={colors.greenAccent[500]}
+                  color="#157bf8"
                 >
-                  Argon
+                  MP
                 </Typography>
               </Box>
             )}
@@ -86,44 +85,16 @@ const SideBar = () => {
           </Box>
         </MenuItem>
       </Menu>
-      {/* {!collapsed && (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "10px",
-            mb: "25px",
-          }}
-        >
-          <Avatar
-            alt="avatar"
-            src={avatar}
-            sx={{ width: "100px", height: "100px" }}
-          />
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-              Tony Stark
-            </Typography>
-            <Typography
-              variant="h6"
-              fontWeight="500"
-              color={colors.greenAccent[500]}
-            >
-              VP Fancy Admin
-            </Typography>
-          </Box>
-        </Box>
-      )} */}
 
       <Box mb={5} pl={collapsed ? undefined : "5%"}>
         <Menu
           menuItemStyles={{
             button: {
               ":hover": {
-                color: "#868dfb",
-                background: "transparent",
+                color: colors.gray[300],
+                background: "rgba(134, 141, 251, 0.1)",
                 transition: ".4s ease",
+                borderRadius: "15px",
               },
             },
           }}
@@ -140,21 +111,22 @@ const SideBar = () => {
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
-          {!collapsed ? "Data" : " "}
+          {!collapsed ? "Manage accounts" : " "}
         </Typography>{" "}
         <Menu
           menuItemStyles={{
             button: {
               ":hover": {
-                color: "#868dfb",
-                background: "transparent",
+                color: colors.gray[300],
+                background: "rgba(134, 141, 251, 0.1)",
                 transition: ".4s ease",
+                borderRadius: "15px",
               },
             },
           }}
         >
           <Item
-            title="Manage Team"
+            title="Accounts"
             path="/team"
             colors={colors}
             icon={<PeopleAltOutlined />}
@@ -165,75 +137,77 @@ const SideBar = () => {
             colors={colors}
             icon={<ContactsOutlined />}
           />
-          <Item
+          {/* <Item
             title="Invoices Balances"
             path="/invoices"
             colors={colors}
             icon={<ReceiptOutlined />}
-          />
+          /> */}
         </Menu>
         <Typography
           variant="h6"
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
-          {!collapsed ? "Pages" : " "}
+          {!collapsed ? "Digitals footprints" : " "}
         </Typography>
         <Menu
           menuItemStyles={{
             button: {
               ":hover": {
-                color: "#868dfb",
-                background: "transparent",
+                color: colors.gray[300],
+                background: "rgba(134, 141, 251, 0.1)",
                 transition: ".4s ease",
+                borderRadius: "15px",
               },
             },
           }}
         >
           <Item
-            title="Profile Form"
+            title="Data"
             path="/form"
             colors={colors}
             icon={<PersonOutlined />}
           />
           <Item
-            title="Calendar"
+            title="Graphs"
             path="/calendar"
             colors={colors}
             icon={<CalendarTodayOutlined />}
           />
-          <Item
+          {/* <Item
             title="FAQ Page"
             path="/faq"
             colors={colors}
             icon={<HelpOutlineOutlined />}
-          />
+          /> */}
         </Menu>
         <Typography
           variant="h6"
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
-          {!collapsed ? "Charts" : " "}
+          {!collapsed ? "Map" : " "}
         </Typography>
         <Menu
           menuItemStyles={{
             button: {
               ":hover": {
-                color: "#868dfb",
-                background: "transparent",
+                color: colors.gray[300],
+                background: "rgba(134, 141, 251, 0.1)",
                 transition: ".4s ease",
+                borderRadius: "15px",
               },
             },
           }}
         >
           <Item
-            title="Bar Chart"
+            title="Cyber attack map"
             path="/bar"
             colors={colors}
             icon={<BarChartOutlined />}
           />
-          <Item
+          {/* <Item
             title="Pie Chart"
             path="/pie"
             colors={colors}
@@ -256,7 +230,7 @@ const SideBar = () => {
             path="/stream"
             colors={colors}
             icon={<WavesOutlined />}
-          />
+          /> */}
         </Menu>
       </Box>
     </Sidebar>
