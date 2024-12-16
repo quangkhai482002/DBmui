@@ -32,7 +32,7 @@ const SideBar = () => {
       backgroundColor={colors.primary[600]}
       rootStyles={{
         border: 0,
-        height: "100%",
+        height: "100vh",
       }}
       collapsed={collapsed}
       onBackdropClick={() => setToggled(false)}
@@ -86,7 +86,7 @@ const SideBar = () => {
         </MenuItem>
       </Menu>
 
-      <Box mb={5} pl={collapsed ? undefined : "5%"}>
+      <Box mb={5} px={collapsed ? undefined : "5%"}>
         <Menu
           menuItemStyles={{
             button: {
@@ -109,10 +109,10 @@ const SideBar = () => {
         <Typography
           variant="h6"
           color={colors.gray[300]}
-          sx={{ m: "15px 0 5px 20px" }}
+          sx={{ m: "10px 0 5px 10px" }}
         >
           {!collapsed ? "Manage accounts" : " "}
-        </Typography>{" "}
+        </Typography>
         <Menu
           menuItemStyles={{
             button: {
@@ -147,7 +147,7 @@ const SideBar = () => {
         <Typography
           variant="h6"
           color={colors.gray[300]}
-          sx={{ m: "15px 0 5px 20px" }}
+          sx={{ m: "10px 0 5px 10px" }}
         >
           {!collapsed ? "Digitals footprints" : " "}
         </Typography>
@@ -175,17 +175,17 @@ const SideBar = () => {
             colors={colors}
             icon={<CalendarTodayOutlined />}
           />
-          {/* <Item
+          <Item
             title="FAQ Page"
-            path="/faq"
+            path="/login"
             colors={colors}
             icon={<HelpOutlineOutlined />}
-          /> */}
+          />
         </Menu>
         <Typography
           variant="h6"
           color={colors.gray[300]}
-          sx={{ m: "15px 0 5px 20px" }}
+          sx={{ m: "10px 0 5px 10px" }}
         >
           {!collapsed ? "Map" : " "}
         </Typography>

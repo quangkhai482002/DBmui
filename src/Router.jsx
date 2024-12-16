@@ -14,6 +14,7 @@ import {
   Geography,
   Calendar,
   Stream,
+  Login,
 } from "./scenes";
 
 const AppRouter = () => {
@@ -34,6 +35,7 @@ const AppRouter = () => {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/geography" element={<Geography />} />
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

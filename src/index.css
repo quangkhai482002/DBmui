@@ -9,8 +9,6 @@ body,
   height     : 100%;
   width      : 100%;
   font-family: "Source Sans 3", sans-serif;
-  font-weight: 500;
-  font-size  : 0.99rem;
 }
 
 ::-webkit-scrollbar {

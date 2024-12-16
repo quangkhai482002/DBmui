@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   IconButton,
   InputBase,
@@ -29,7 +30,8 @@ const Navbar = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      p={2}
+      p={1}
+      bgcolor={colors.primary[600]}
     >
       <Box display="flex" alignItems="center" gap={2}>
         <IconButton
@@ -38,7 +40,7 @@ const Navbar = () => {
         >
           <MenuOutlined />
         </IconButton>
-        <Box
+        {/* <Box
           display="flex"
           alignItems="center"
           bgcolor={colors.primary[600]}
@@ -49,7 +51,7 @@ const Navbar = () => {
           <IconButton type="button" sx={{ p: 1 }}>
             <SearchOutlined />
           </IconButton>
-        </Box>
+        </Box> */}
       </Box>
 
       <Box>
@@ -63,11 +65,11 @@ const Navbar = () => {
         <IconButton>
           <NotificationsOutlined />
         </IconButton>
-        <IconButton>
+        {/* <IconButton>
           <SettingsOutlined />
-        </IconButton>
+        </IconButton> */}
         <IconButton>
-          <PersonOutlined />
+          <Avatar sx={{ width: 30, height: 30 }}>A</Avatar>
         </IconButton>
       </Box>
     </Box>

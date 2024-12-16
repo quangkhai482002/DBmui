@@ -10,7 +10,7 @@ function App() {
   const [theme, colorMode] = useMode();
   const [toggled, setToggled] = useState(false);
   const values = { toggled, setToggled };
-  
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -23,12 +23,18 @@ function App() {
                 flexGrow: 1,
                 display: "flex",
                 flexDirection: "column",
-                height: "100%",
+                height: "100vh",
                 maxWidth: "100%",
               }}
             >
               <Navbar />
-              <Box sx={{ overflowY: "auto", flex: 1, maxWidth: "100%" }}>
+              <Box
+                sx={{
+                  overflowY: "auto",
+                  flex: 1,
+                  maxWidth: "100%",
+                }}
+              >
                 <Outlet />
               </Box>
             </Box>

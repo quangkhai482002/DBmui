@@ -57,10 +57,10 @@ export const tokens = (mode) => ({
           300: "#a4a9fc",
           400: "#868dfb",
           500: "#6870fa",
-          600: "#535ac8",
-          700: "#3e4396",
-          800: "#2a2d64",
-          900: "#151632",
+          600: "#3651ff",
+          700: "#2833f0",
+          800: "#0f1cff",
+          900: "#0009ff",
         },
       }
     : {
@@ -132,7 +132,8 @@ export const themeSettings = (mode) => {
       ...(mode === "dark"
         ? {
             primary: {
-              main: colors.primary[500],
+              main: colors.primary[100],
+              // main: white,
             },
             secondary: {
               main: colors.greenAccent[500],
@@ -165,7 +166,7 @@ export const themeSettings = (mode) => {
     },
     typography: {
       fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-      fontSize: 12,
+      // fontSize: 13,
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 40,
